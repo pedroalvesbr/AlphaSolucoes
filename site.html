@@ -129,7 +129,60 @@ body {
     background-color: #ef7e22;
 
 }
+       .service-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
 
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card ul li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .service-card ul li::before {
+            content: "✔";
+            color: green;
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: #25D366;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            border-radius: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #1AAB57;
+        }
 
 </style>
 </head>
@@ -175,7 +228,7 @@ body {
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portoes-section">Quem Somos</a>
+            <a class="nav-link" href="#quem-somos-section">Quem Somos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#servicos-section">Serviços</a>
@@ -269,55 +322,71 @@ body {
 </a>
 
 
-  <div class="container marketing">
-    <div class="row" id="portoes-section">
-      <div class="col-lg-4">
-        <img src="imagens/seguranca_eletronica.png" class="rounded-circle img-fluid" style="width: 250px; height: 250px; object-fit: cover;">
-        <h2 class="fw-normal">Segurança Eletrônica</h2>
-<ul>
-  <li>CFTV IP</li>
-  <li>Porteiro Eletrônico</li>
-  <li>Fechaduras Eletrônicas</li>
-  <li>Cercas Elétricas</li>
-  <li>Alarmes</li>
-  <li>Controle de Acesso</li>
-</ul>
-    <p><a href="https://wa.me/5512992465196" target="_blank" class="btn btn-secondary"><span class="bi-whatsapp"></span> <span class="btn-inner--text">Solicitar orçamento</span></a></p>
-      </div>
-      <div class="col-lg-4">
-        <img src="imagens/infraestrutura.jpg" class="rounded-circle img-fluid" style="width: 250px; height: 250px; object-fit: cover;">
-        <h2 class="fw-normal">Infraestrutura de Rede e Telecomunicações</h2>
-<ul>
-  <li>Instalação de Pontos de Rede</li>
-  <li>Fibra Óptica</li>
-  <li>Telefonia IP</li>
-  <li>Access Point</li>
-  <li>Montagem de Rack</li>
-</ul>
-        <p><a href="https://wa.me/5512992465196" target="_blank" class="btn btn-secondary"><span class="bi-whatsapp"></span> <span class="btn-inner--text">Solicitar orçamento</span></a></p>
-      </div>
-      <div class="col-lg-4">
-        <img src="imagens/placa_solar.webp" class="rounded-circle img-fluid" style="width: 250px; height: 250px; object-fit: cover;">
-        <h2 class="fw-normal">Infraestrutura Elétrica</h2>
-<ul>
-  <li>Infraestruturas gerais</li>
-  <li>Circuitos elétricos</li>
-  <li>Placas solares</li>
-  <li>Refletores e holofotes</li>
-</ul>
-        <p><a href="https://wa.me/5512992465196" target="_blank" class="btn btn-secondary"><span class="bi-whatsapp"></span> <span class="btn-inner--text">Solicitar orçamento</span></a></p>
+ <div class="container mt-5">
+    <div class="row text-center" id="quem-somos-section">
+        <div class="col-lg-4">
+            <div class="service-card">
+                <img src="imagens/seguranca_eletronica.png" alt="Segurança Eletrônica">
+                <h3>Segurança Eletrônica</h3>
+                <ul>
+                    <li>CFTV IP</li>
+                    <li>Porteiro Eletrônico</li>
+                    <li>Fechaduras Eletrônicas</li>
+                    <li>Cercas Elétricas</li>
+                    <li>Alarmes</li>
+                    <li>Controle de Acesso</li>
+                </ul>
+                <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
+                    <i class="fab fa-whatsapp"></i> Solicitar orçamento
+                </a>
+            </div>
+        </div>
 
-      </div>
+        <div class="col-lg-4">
+            <div class="service-card">
+                <img src="imagens/infraestrutura.jpg" alt="Infraestrutura de Rede e Telecomunicações">
+                <h3>Infraestrutura de Rede e Telecomunicações</h3>
+                <ul>
+                    <li>Instalação de Pontos de Rede</li>
+                    <li>Fibra Óptica</li>
+                    <li>Telefonia IP</li>
+                    <li>Access Point</li>
+                    <li>Montagem de Rack</li>
+                </ul>
+                <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
+                    <i class="fab fa-whatsapp"></i> Solicitar orçamento
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="service-card">
+                <img src="imagens/placa_solar.webp" alt="Infraestrutura Elétrica">
+                <h3>Infraestrutura Elétrica</h3>
+                <ul>
+                    <li>Infraestruturas gerais</li>
+                    <li>Circuitos elétricos</li>
+                    <li>Placas solares</li>
+                    <li>Refletores e holofotes</li>
+                    <li>Tomadas</li>
+                    <li>Tomadas</li>
+                </ul>
+                <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
+                    <i class="fab fa-whatsapp"></i> Solicitar orçamento
+                </a>
+            </div>
+        </div>
     </div>
+</div>
 
 
     <hr class="featurette-divider">
 
     <div class="row featurette" id="servicos-section" >
   <div class="col-md-7">
-    <h2 class="featurette-heading fw-normal lh-1">Instalação para
+    <h2 class="featurette-heading fw-normal lh-1">Infraestrutura para
     <span class="text-body-secondary">Indústrias de Manufatura</span></h2>
-    <p class="lead">Soluções personalizadas para garantir eficiência, segurança e controle de acesso em ambientes industriais de produção.</p>
+    <p class="lead">A Alpha oferece soluções especializadas para indústrias de manufatura, garantindo eficiência operacional, segurança e controle de acesso em ambientes industriais. Com experiência em infraestrutura elétrica, telecomunicações e segurança eletrônica, a empresa desenvolve projetos personalizados para atender às necessidades específicas do setor produtivo.</p>
   </div>
   <div class="col-md-5">
     <img src="imagens/industria-manufatura.png" class="w-100" data-aos="fade-left">
@@ -325,39 +394,18 @@ body {
 </div>
    <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Serviços para
-        <span class="text-body-secondary">Texto</span></h2>
-        <p class="lead">Configurar texto</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="imagens/centro-logistico.png" class="w-100"  data-aos="fade-right">
-      </div>
-    </div>
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">TEXTO
-        <span class="text-body-secondary"> Setor Agroindustrial</span></h2>
-        <p class="lead">Soluções específicas para atender às necessidades do setor agroindustrial</p>
-      </div>
-      <div class="col-md-5">
-        <img src="imagens/agro-industrial.png" class="w-100"  data-aos="fade-left">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
             <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading fw-normal lh-1">
         <span class="text-body-secondary">Condominios e Edifícios Corporativos</span></h2>
         <p class="lead">Serviços para Condominios e Edifícios Corporativos</p>
+        <p>🔹 Sistemas de segurança eletrônica com câmeras de alta definição
+🔹 Controle de acesso moderno com portaria eletrônica e fechaduras inteligentes
+🔹 Infraestrutura elétrica e de rede para áreas comuns e individuais
+🔹 Iluminação eficiente e energia solar para economia e sustentabilidade</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img src="imagens/centro-comercial.png" class="w-100"  data-aos="fade-right">
+        <img src="imagens/condominio_empresarial.webp" class="w-100"  data-aos="fade-right">
       </div>
     </div>
 
