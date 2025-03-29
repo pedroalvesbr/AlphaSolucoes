@@ -1,51 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alpha Soluções</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* GLOBAL STYLES */
 body {
-    padding-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 0;
     color: #5a5a5a;
-}
-/*
-.carousel-item img {
-  height: 100vh; 
-  object-fit: cover; 
-}
-*/
-
-.carousel-item img {
-  object-fit: cover; /* Mantém proporção e preenche o espaço */
-  width: 100%; /* Garante largura total */
-  height: 80vh; /* Ajusta a altura para telas maiores */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+/* HEADER STYLES */
+.header-top-01 {
+    padding: 8px 0;
+    font-size: 14px;
 }
 
+.nav-link {
+    color: #ef7e22;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.navbar-brand {
+    color: #ef7e22;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #ef7e22;
+}
+
+.nav i {
+    font-size: 18px;
+}
+
+.nav .me-3 {
+    margin-right: 15px;
+}
+
+.social-icons a {
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+}
+
+.social-icons a:hover {
+    background-color: rgba(239, 126, 34, 0.2);
+    transform: translateY(-3px);
+}
+
+.bi-facebook,
+.bi-linkedin,
+#bi-whatsapp-header,
+.bi-instagram {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.bi-facebook:hover,
+.bi-linkedin:hover,
+.bi-whatsapp:hover,
+.bi-instagram:hover {
+    color: #ef7e22;
+}
+
+/* CAROUSEL STYLES */
 .carousel {
-  margin-top: 56px; /* Ajusta caso a navbar esteja fixa no topo */
+    margin-top: 106px;
 }
 
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 80vh;
+}
 
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+    bottom: 20%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption h1 {
+    color: #333 !important;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    color: #555 !important;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
 
 /* MARKETING CONTENT */
-
-
 .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -54,170 +128,374 @@ body {
     margin-left: .75rem;
 }
 
+/* FEATURETTE STYLES */
 .featurette-divider {
     margin: 5rem 0;
 }
 
 .featurette-heading {
     letter-spacing: -.05rem;
+    font-weight: 700;
 }
 
-@media (min-width: 40em) {
-    .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-    }
-
-    .featurette-heading {
-        font-size: 50px;
-    }
+.text-primary {
+    --bs-text-opacity: 1;
+    color: #ef7e22 !important;
+    font-family: "Poppins", sans-serif;
 }
 
-@media (min-width: 62em) {
-    .featurette-heading {
-        margin-top: 7rem;
-    }
-}
-.nav-link {
-  
-  color: #ef7e22;
-  text-decoration: none;
-}
-
-.navbar-brand{
-  color: #ef7e22;
-}
-.nav-link:hover {
-  color: #ef7e22; /* Cor ao passar o mouse (opcional) */
+/* SERVICE CARDS */
+.service-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.nav i {
-  font-size: 20px; /* Ajusta o tamanho dos ícones */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.nav .me-3 {
-  margin-right: 15px; /* Espaçamento entre os ícones das redes sociais */
+.service-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f5f5f5;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
 }
 
-.bi-facebook,
-.bi-linkedin,
-#bi-whatsapp-header,
-.bi-instagram {
-  color: #000; /* Cor preta para os ícones */
+.service-card:hover img {
+    transform: scale(1.05);
+    border-color: #ef7e22;
 }
 
-.bi-facebook:hover,
-.bi-linkedin:hover,
-.bi-whatsapp:hover,
-.bi-instagram:hover {
-  color: #ef7e22; /* Cor ao passar o mouse (opcional) */
+.service-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-.carousel-caption h1,
-.carousel-caption p {
-  color: black !important;
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-.carousel-caption {
-  background: rgba(255, 255, 255, 0.8); /* Fundo branco transparente */
-  padding: 20px; 
-  border-radius: 15px; 
+.service-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    padding-left: 15px;
 }
 
-.btn btn-secondary{
+.service-card ul li::before {
+    content: "✔";
+    color: #25D366;
+    font-weight: bold;
+}
+
+.btn-custom {
+    background-color: #25D366;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-custom:hover {
+    background-color: #1AAB57;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+/* WHATSAPP BUTTON */
+#botao_wpp {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#botao_wpp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* FOOTER STYLES */
+.footer {
+    background: linear-gradient(135deg, #222, #333);
+    color: #fff;
+    padding: 50px 0 30px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 49%, #222 50%);
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ef7e22;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
     background-color: #ef7e22;
-
 }
-       .service-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-        }
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        .service-card img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #ddd;
-            margin-bottom: 15px;
-        }
+.footer-contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-        }
+.footer-contact-info li i {
+    margin-right: 10px;
+    color: #ef7e22;
+    font-size: 18px;
+}
 
-        .service-card ul li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
+.footer-social {
+    display: flex;
+    margin-top: 20px;
+}
 
-        .service-card ul li::before {
-            content: "✔";
-            color: green;
-            font-weight: bold;
-        }
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
 
-        .btn-custom {
-            background-color: #25D366;
-            color: white;
-            font-weight: bold;
-            transition: 0.3s;
-            border-radius: 30px;
-        }
+.footer-social a:hover {
+    background-color: #ef7e22;
+    transform: translateY(-3px);
+}
 
-        .btn-custom:hover {
-            background-color: #1AAB57;
-        }
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ef7e22;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 991.98px) {
+    .carousel {
+        margin-top: 56px;
+    }
+    
+    .carousel-item img {
+        height: 60vh;
+    }
+    
+    .carousel-caption {
+        bottom: 10%;
+        padding: 15px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .service-card {
+        margin-bottom: 30px;
+    }
+    
+    .featurette-heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header-top-01 {
+        display: none;
+    }
+    
+    .carousel {
+        margin-top: 56px;
+    }
+    
+    .carousel-item img {
+        height: 50vh;
+    }
+    
+    .carousel-caption {
+        bottom: 5%;
+        padding: 10px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    
+    .featurette-divider {
+        margin: 3rem 0;
+    }
+    
+    .featurette-heading {
+        margin-top: 1rem !important;
+        font-size: 1.8rem;
+    }
+    
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-item img {
+        height: 40vh;
+    }
+    
+    .carousel-caption {
+        max-width: 90%;
+        bottom: 5%;
+        padding: 8px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+    
+    #botao_wpp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
 </style>
 </head>
 <body>
 
-<header class="fixed-top default-fixed-header bg-white headroom--not-top headroom--not-bottom headroom--pinned">
-
- <div class="header-top-01 header-top-light small">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="nav d-flex">
-          <a class="nav-link ps-0 text-dark" href="tel:+5512982601279">
-            <i class="bi-telephone-fill"></i> (12) 9 9246-5196
-          </a>
-          <a class="nav-link ms-auto ms-lg-0 pe-0 text-dark" href="https://wa.me/5512992465196" target="_blank">
-            <i class="bi bi-geo-alt"></i> Vale do Paraíba - SP
-          </a>
+<header class="fixed-top bg-white">
+  <div class="header-top-01 header-top-light small">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="nav d-flex">
+            <a class="nav-link ps-0 text-dark" href="tel:+5512992465196">
+              <i class="bi-telephone-fill"></i> (12) 9 9246-5196
+            </a>
+            <a class="nav-link ms-auto ms-lg-0 pe-0 text-dark" href="https://wa.me/5512992465196" target="_blank">
+              <i class="bi bi-geo-alt"></i> Vale do Paraíba - SP
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-6 d-none d-lg-block">
-        <div class="nav justify-content-end">
-          <a href="#" class="me-3"><i class="bi-facebook"></i></a>
-          <a href="#" class="me-3"><i class="bi-linkedin"></i></a>
-          <a href="#" class="me-3"><i class="bi-whatsapp" id="bi-whatsapp-header"></i></a>
-          <a href="#"><i class="bi-instagram"></i></a>
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="nav justify-content-end social-icons">
+            <a href="#" class="me-2"><i class="bi-facebook"></i></a>
+            <a href="#" class="me-2"><i class="bi-linkedin"></i></a>
+            <a href="https://wa.me/5512992465196" target="_blank" class="me-2"><i class="bi-whatsapp" id="bi-whatsapp-header"></i></a>
+            <a href="#"><i class="bi-instagram"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div> 
-  <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> -->
-    <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
-    <div class="container-fluid">
-        <img id="logo_empresa" src="imagens/logo.png" style="width: 100px; height: auto; padding-right: 10px;"></img>
+  
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <img id="logo_empresa" src="imagens/logo.png" style="width: 80px; height: auto; padding-right: 10px;" alt="Alpha Soluções Logo">
       <a class="navbar-brand" href="#">Alpha Soluções</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -234,249 +512,323 @@ body {
             <a class="nav-link" href="#servicos-section">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contato-section">Clientes</a>
+            <a class="nav-link" href="#contato-section">Contato</a>
           </li>
         </ul>       
       </div>
     </div>
   </nav>
-
 </header>
 
 <main>
-    <div class="container-fluid p-0">
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active">
-      </button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="imagens/controle_acesso.png" class="d-block w-100" alt="First slide">
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Controle de Acesso </h1>
-            <p>Biometria, Reconhecimento Facial, Tag, Crachás e Senhas </p>
+  <div class="container-fluid p-0">
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagens/controle_acesso.png" class="d-block w-100" alt="Controle de Acesso">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Controle de Acesso</h1>
+              <p>Biometria, Reconhecimento Facial, Tag, Crachás e Senhas</p>
+            </div>
           </div>
         </div>
-      </div>
-       <div class="carousel-item">
-        <img src="imagens/cancelas.png" class="w-100" alt="Second slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Cancelas</h1>
-            <p>Instalações de Cancelas com fechamento e abertura automáticos, biométrica, facil, tag ou manual</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="imagens/cameras_termicas.png" class="w-100" alt="Third slide">
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Câmeras Térmicas</h1>
-            <p>Infraestrutura, configuração em rede, Monitoramento 24hrs de temperatura, Alarme de Temperatura Alta, Reconhecimento Facial.</p>
-           
-          </div>
-        </div>
-      </div>
         <div class="carousel-item">
-        <img src="imagens/fibra_optica.png" class="w-100" alt="Second slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Fibra Óptica</h1>
-            <p>Montagem de estrutura, Testes de Fibra, Fusão e Implementação para usos a longa distância</p>
+          <img src="imagens/cancelas.png" class="w-100" alt="Cancelas">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Cancelas</h1>
+              <p>Instalações de Cancelas com fechamento e abertura automáticos, biométrica, facial, tag ou manual</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/cameras_termicas.png" class="w-100" alt="Câmeras Térmicas">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Câmeras Térmicas</h1>
+              <p>Infraestrutura, configuração em rede, Monitoramento 24hrs de temperatura, Alarme de Temperatura Alta, Reconhecimento Facial.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/fibra_optica.png" class="w-100" alt="Fibra Óptica">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Fibra Óptica</h1>
+              <p>Montagem de estrutura, Testes de Fibra, Fusão e Implementação para usos a longa distância</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <a rel="noreferrer" id="botao_wpp" href="https://wa.me/5512992465196" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <div class="container mt-5">
+      <div class="row text-center" id="quem-somos-section">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card">
+            <img src="imagens/seguranca_eletronica.png" alt="Segurança Eletrônica">
+            <h3>Segurança Eletrônica</h3>
+            <ul>
+              <li>CFTV IP</li>
+              <li>Porteiro Eletrônico</li>
+              <li>Fechaduras Eletrônicas</li>
+              <li>Cercas Elétricas</li>
+              <li>Alarmes</li>
+              <li>Controle de Acesso</li>
+            </ul>
+            <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
+              <i class="bi bi-whatsapp me-2"></i> Solicitar orçamento
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card">
+            <img src="imagens/infraestrutura.jpg" alt="Infraestrutura de Rede e Telecomunicações">
+            <h3>Infraestrutura de Rede</h3>
+            <ul>
+              <li>Instalação de Pontos de Rede</li>
+              <li>Fibra Óptica</li>
+              <li>Telefonia IP</li>
+              <li>Access Point</li>
+              <li>Montagem de Rack</li>
+            </ul>
+            <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
+              <i class="bi bi-whatsapp me-2"></i> Solicitar orçamento
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mx-auto">
+          <div class="service-card">
+            <img src="imagens/placa_solar.webp" alt="Infraestrutura Elétrica">
+            <h3>Infraestrutura Elétrica</h3>
+            <ul>
+              <li>Infraestruturas gerais</li>
+              <li>Circuitos elétricos</li>
+              <li>Placas solares</li>
+              <li>Refletores e holofotes</li>
+              <li>Tomadas</li>
+              <li>Instalações elétricas</li>
+            </ul>
+            <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
+              <i class="bi bi-whatsapp me-2"></i> Solicitar orçamento
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-<a rel="noreferrer" id="botao_wpp" href="https://wa.me/5512992465196" style="position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            bottom: 150px;
-            right: 20px;
-            background-color: #25d366;
-            color: #fff;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 1px 1px 2px #888;
-            z-index: 100;" target="_blank">
-            <i class="bi bi-whatsapp"></i>
-</a>
-
-
- <div class="container mt-5">
-    <div class="row text-center" id="quem-somos-section">
-        <div class="col-lg-4">
-            <div class="service-card">
-                <img src="imagens/seguranca_eletronica.png" alt="Segurança Eletrônica">
-                <h3>Segurança Eletrônica</h3>
-                <ul>
-                    <li>CFTV IP</li>
-                    <li>Porteiro Eletrônico</li>
-                    <li>Fechaduras Eletrônicas</li>
-                    <li>Cercas Elétricas</li>
-                    <li>Alarmes</li>
-                    <li>Controle de Acesso</li>
-                </ul>
-                <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
-                    <i class="fab fa-whatsapp"></i> Solicitar orçamento
-                </a>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="service-card">
-                <img src="imagens/infraestrutura.jpg" alt="Infraestrutura de Rede e Telecomunicações">
-                <h3>Infraestrutura de Rede e Telecomunicações</h3>
-                <ul>
-                    <li>Instalação de Pontos de Rede</li>
-                    <li>Fibra Óptica</li>
-                    <li>Telefonia IP</li>
-                    <li>Access Point</li>
-                    <li>Montagem de Rack</li>
-                </ul>
-                <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
-                    <i class="fab fa-whatsapp"></i> Solicitar orçamento
-                </a>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="service-card">
-                <img src="imagens/placa_solar.webp" alt="Infraestrutura Elétrica">
-                <h3>Infraestrutura Elétrica</h3>
-                <ul>
-                    <li>Infraestruturas gerais</li>
-                    <li>Circuitos elétricos</li>
-                    <li>Placas solares</li>
-                    <li>Refletores e holofotes</li>
-                    <li>Tomadas</li>
-                    <li>Tomadas</li>
-                </ul>
-                <a href="https://wa.me/5512992465196" target="_blank" class="btn btn-custom">
-                    <i class="fab fa-whatsapp"></i> Solicitar orçamento
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
 
     <hr class="featurette-divider">
 
-    <div class="row featurette" id="servicos-section" >
-  <div class="col-md-7">
-    <h2 class="featurette-heading fw-normal lh-1">Infraestrutura para
-    <span class="text-body-secondary">Indústrias de Manufatura</span></h2>
-    <p class="lead">A Alpha oferece soluções especializadas para indústrias de manufatura, garantindo eficiência operacional, segurança e controle de acesso em ambientes industriais. Com experiência em infraestrutura elétrica, telecomunicações e segurança eletrônica, a empresa desenvolve projetos personalizados para atender às necessidades específicas do setor produtivo.</p>
-  </div>
-  <div class="col-md-5">
-    <img src="imagens/industria-manufatura.png" class="w-100" data-aos="fade-left">
-  </div>
-</div>
-   <hr class="featurette-divider">
-
-            <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">
-        <span class="text-body-secondary">Condominios e Edifícios Corporativos</span></h2>
-        <p class="lead">Serviços para Condominios e Edifícios Corporativos</p>
-        <p>🔹 Sistemas de segurança eletrônica com câmeras de alta definição
-🔹 Controle de acesso moderno com portaria eletrônica e fechaduras inteligentes
-🔹 Infraestrutura elétrica e de rede para áreas comuns e individuais
-🔹 Iluminação eficiente e energia solar para economia e sustentabilidade</p>
+    <div class="container">
+      <div class="row featurette" id="servicos-section">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-bold lh-1">
+            Infraestrutura para <strong class="text-primary">Indústrias de Manufatura</strong>
+          </h2>
+          <p class="lead">Soluções especializadas para indústrias de manufatura, garantindo eficiência operacional, segurança e controle de acesso em ambientes industriais. Nossa expertise em infraestrutura elétrica, telecomunicações e segurança eletrônica permite desenvolver projetos personalizados para atender às necessidades do setor produtivo.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="imagens/industria-manufatura.png" class="w-100 rounded shadow" data-aos="fade-left" alt="Indústria de Manufatura">
+        </div>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img src="imagens/condominio_empresarial.webp" class="w-100"  data-aos="fade-right">
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-bold lh-1">
+            <strong class="text-primary">Condomínios e Edifícios Corporativos</strong>
+          </h2>
+          <p class="lead">Soluções completas para garantir segurança, eficiência e tecnologia em ambientes residenciais e corporativos.</p>
+          <ul class="list-unstyled">
+            <li>✅ Segurança eletrônica com câmeras de alta definição</li>
+            <li>✅ Controle de acesso moderno com portaria eletrônica</li>
+            <li>✅ Infraestrutura elétrica e de rede para áreas comuns</li>
+            <li>✅ Iluminação eficiente e energia solar para sustentabilidade</li>
+          </ul>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="imagens/condominio_empresarial.webp" class="w-100 rounded shadow" data-aos="fade-right" alt="Condomínios e Edifícios Corporativos">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-bold lh-1">
+            <strong class="text-primary">Infraestrutura para Centros Comerciais</strong>
+          </h2>
+          <p class="lead">Projetos completos para garantir segurança, conectividade e eficiência em centros comerciais.</p>
+          <ul class="list-unstyled">
+            <li>🛡️ Segurança eletrônica e monitoramento 24h</li>
+            <li>📡 Redes e telecomunicações para conectividade confiável</li>
+            <li>🔌 Instalações elétricas modernas e eficientes</li>
+            <li>💡 Iluminação estratégica para conforto e economia</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <img src="imagens/centro_comercial.jpeg" class="w-100 rounded shadow" data-aos="fade-left" alt="Centros Comerciais">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-bold lh-1">
+            <strong class="text-primary">Serviços para Construtoras</strong>
+          </h2>
+          <p class="lead">Infraestrutura segura e inteligente desde a fundação até a entrega do empreendimento.</p>
+          <ul class="list-unstyled">
+            <li>🏗️ Infraestrutura de redes e telecomunicações</li>
+            <li>📹 Segurança eletrônica para monitoramento de obras</li>
+            <li>⚡ Instalação elétrica e sistemas de automação</li>
+            <li>🔧 Suporte técnico especializado para grandes projetos</li>
+          </ul>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="imagens/construtora_1.webp" class="w-100 rounded shadow" data-aos="fade-right" alt="Construtoras">
+        </div>
       </div>
     </div>
-
-    <hr class="featurette-divider">
   </div>
-<!--
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2024 Alpha Soluções &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    <p> Telefone: 12 5512992465196 - Marcos Andrade (Gerente Operacional) </p>
-    <p> E-mail: lucashenrique.oliveira@outlook.com </p>
-  </footer>
--->
+</main>
 
-<!--
-<footer class="container mt-4" id="contato-section">
-  <div class="row">
-   
-    <div class="col-md-4">
-      <p>&copy; 2023 Alpha Soluções</p>
-       <a href="#" class="me-3"><i class="bi-facebook"></i></a>
-          <a href="#" class="me-3"><i class="bi-linkedin"></i></a>
-          <a href="#" class="me-3"><i class="bi-whatsapp" id="bi-whatsapp-header"></i></a>
-          <a href="#"><i class="bi-instagram"></i></a>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <p>Telefone: 12 9 9246 5196</p>
-      <p>Marcos Andrade (Gerente Operacional)</p>
-    </div>
-
-    <div class="col-md-4 text-md-end">
-      <p>E-mail: marcosandrade@email.com</p>
-      <p><a href="#">Home</a></p>
-    </div>
-  </div>
-</footer>
-
--->
-
-<footer class="container-fluid bg-dark text-white py-4 mt-4" id="contato-section">
+<!-- Novo Footer Melhorado -->
+<footer class="footer" id="contato-section">
   <div class="container">
     <div class="row">
-      <!-- Coluna 1 -->
-      <div class="col-md-4">
-        <p>&copy; 2023 Alpha Soluções</p>
-        <div class="nav">
-          <a href="#" class="me-3 text-white"><i class="bi-facebook"></i></a>
-          <a href="#" class="me-3 text-white"><i class="bi-linkedin"></i></a>
-          <a href="#" class="me-3 text-white"><i class="bi-whatsapp" id="bi-whatsapp-header"></i></a>
-          <a href="#" class="text-white"><i class="bi-instagram"></i></a>
+      <!-- Coluna 1: Logo e Sobre -->
+      <div class="col-lg-4 col-md-6 footer-column">
+        <img src="imagens/logo.png" alt="Alpha Soluções" class="footer-logo">
+        <p> Com uma equipe de profissionais com mais de 10 anos de experiencia, a Alpha Soluções esta atendendo grandes empresas realizando serviços em Infraestrutura de Rede e Telecomunicações, Segurança Eletrônica e Infraestrutura Elétrica.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/5512992465196" target="_blank"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
-      <!-- Coluna 2 -->
-      <div class="col-md-4 text-center">
-        <p>Telefone: 12 9 9246 5196</p>
-        <p>Marcos Andrade (Gerente Operacional)</p>
+      
+      <!-- Coluna 2: Contato -->
+      <div class="col-lg-4 col-md-6 footer-column">
+        <h3 class="footer-heading">Contato</h3>
+        <ul class="footer-contact-info">
+          <li>
+            <i class="bi bi-geo-alt"></i>
+            <span>Vale do Paraíba, SP</span>
+          </li>
+          <li>
+            <i class="bi bi-telephone"></i>
+            <span>(12) 9 9246-5196</span>
+          </li>
+          <li>
+            <i class="bi bi-envelope"></i>
+            <span>contato@alphasolucoes.com.br</span>
+          </li>
+          <li>
+            <i class="bi bi-person"></i>
+            <span>Marcos Andrade (Gerente Operacional)</span>
+          </li>
+        </ul>
       </div>
-      <!-- Coluna 3 -->
-      <div class="col-md-4 text-md-end">
-        <p>E-mail: marcosandrade@email.com</p>
-        <p><a href="#" class="text-white">Home</a></p>
+      
+      <!-- Coluna 3: Links Rápidos -->
+      <div class="col-lg-4 col-md-6 footer-column">
+        <h3 class="footer-heading">Links Rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#quem-somos-section">Quem Somos</a></li>
+          <li><a href="#servicos-section">Serviços</a></li>
+          <li><a href="#contato-section">Contato</a></li>
+          <li><a href="https://wa.me/5512992465196" target="_blank">Solicitar Orçamento</a></li>
+        </ul>
       </div>
+    </div>
+    
+    <!-- Rodapé inferior -->
+    <div class="footer-bottom">
+      <p>&copy; 2023 Alpha Soluções. Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>
-<script>
-  AOS.init();
-</script>
 
-</main>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS animation library with better settings
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 100,
+      delay: 100,
+      easing: 'ease-in-out',
+      mirror: true
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Add active class to nav items on scroll
+    const sections = document.querySelectorAll('section, div[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    window.addEventListener('scroll', function() {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
